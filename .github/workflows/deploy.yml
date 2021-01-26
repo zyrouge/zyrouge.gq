@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Use NodeJS v12.18.3
+      - name: Installing NodeJS
         uses: actions/setup-node@v1
         with:
             node-version: "12.18.3"
