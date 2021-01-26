@@ -16,7 +16,7 @@
       <p><a href="mailto:dev@zyrouge.gq">dev@zyrouge.gq</a></p>
 
       <hr class="border-gray-100 mx-4 my-6 opacity-30" />
-      <p class="pb-6">Zyrouge Development &copy; 2020</p>
+      <p class="pb-6">Zyrouge Development &copy; 2020 - 2021</p>
     </div>
   </footer>
 </template>

@@ -21,7 +21,7 @@
     <h1 class="text-2xl font-bold mt-6">Make my day!</h1>
     <p>
       Help me buy a coffee by becoming a
-      <a class="text-red-500" href="https://patreon.com/zyrouge">Patron</a>!
+      <a class="text-red-500" href="/patreon">Patron</a>!
     </p>
 
     <h1 class="text-2xl font-bold mt-6">Need help?</h1>
