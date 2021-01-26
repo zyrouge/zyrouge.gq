@@ -47,30 +47,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style>
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  overflow-x: hidden;
-}
-
-pre,
-code {
-  font-family: "Source Code Pro", monospace;
-}
-
-/* Transitions */
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s ease;
-}
-
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
-}
-</style>
