@@ -1,0 +1,25 @@
+name: Deploy Site
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use NodeJS v12.18.3
+        uses: actions/setup-node@v1
+        with:
+            node-version: "12.18.3"
+
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: build
+          FOLDER: dist
+          BUILD_SCRIPT: npm install -D && npm run build
