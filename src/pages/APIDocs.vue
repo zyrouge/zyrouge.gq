@@ -27,9 +27,16 @@
       </table>
       </div>
       <br>
-      <p class="font-bold text-2xl mb-2">Endpoints</p>
+      <div class="flex flex-row justify-between">
+        <p class="font-bold text-2xl mb-2">Endpoints</p>
+        <div>
+          <p class="flex flex-row items-center">
+            <input type="checkbox" class="mr-2 h-4 w-4" @click="toggleShowNsfw()" :checked="!showNsfw"> Hide NSFW
+          </p>
+        </div>
+      </div>
       <div v-for="ep in docs.docs" :key="ep">
-        <div class="bg-gradient-to-r from-indigo-700 to-purple-500 rounded-md px-5 py-3 text-white mb-4">
+        <div v-if="ep.name.includes('NSFW') ? showNsfw : true" class="bg-gradient-to-r from-indigo-700 to-purple-500 rounded-md px-5 py-3 text-white mb-4">
           <div class="flex flex-row justify-between">
             <p><span class="bg-white text-blue-700 uppercase px-1 rounded-sm mr-2 font-semibold">{{ ep.type }}</span>{{ ep.name.replace(/_/g, " ").replace(/(\(|\[)NSFW(\)|\])/g, "") }}</p>
             <p><span class="hidden md:inline">{{ baseURL }}</span>{{ ep.url }}</p>
@@ -83,11 +90,11 @@ export default defineComponent({
     const data: {
       docs: IAPIDocsResponse | null;
       baseURL: string;
-      allowNSFW: boolean;
+      showNsfw: boolean;
     } = {
       docs: null,
       baseURL: API.APIBase,
-      allowNSFW: false
+      showNsfw: false
     };
     return data;
   },
@@ -103,6 +110,9 @@ export default defineComponent({
       let string = `<span class="font-mono bg-indigo-500 rounded px-1 bg-opacity-50">${param.field}</span> ${param.type}`;
       if (param.description) string += ` - <span class="font-bold">${this.stripHTML(param.description)}</span>`;
       return string;
+    },
+    toggleShowNsfw() {
+      this.showNsfw = !this.showNsfw;
     }
   }
 });
