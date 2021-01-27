@@ -45,14 +45,6 @@
           <router-link
             class="text-gray-50"
             @click="minimizeMenu()"
-            to="/dashboard"
-            >Dashboard</router-link
-          >
-        </p>
-        <p v-if="$user.value">
-          <router-link
-            class="text-gray-50"
-            @click="minimizeMenu()"
             to="/profile/me"
             >Profile</router-link
           >
@@ -74,7 +66,7 @@
           <a
             class="text-gray-50"
             @click="minimizeMenu()"
-            href="https://github.com/zyrouge"
+            href="/github"
             >GitHub</a
           >
         </p>

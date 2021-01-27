@@ -19,6 +19,7 @@ const routes: RouteRecordRaw[] = [
     getRedirectComponents("/discord", "https://discord.gg/8KV5zCg"),
     getRedirectComponents("/patreon", "https://www.patreon.com/zyrouge"),
     getRedirectComponents("/guides", "https://guides.zyrouge.gq"),
+    getRedirectComponents("/github", "https://github.com/zyrouge"),
 
     /* Error Pages */
     { path: '/:pathMatch(.*)*', component: Page404 }
