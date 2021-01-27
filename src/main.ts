@@ -4,7 +4,7 @@ import { RouteLocation } from "vue-router";
 import Router from "./plugins/router";
 
 import App from "./App.vue";
-import "./assets/main.css";
+import("./assets/main.css");
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSun, faMoon, faBars, faTimes, faInfo, faCheck, faExclamation, faHatWizard, faAngleRight, faRedoAlt, faTrash, faPencilAlt, faBookDead, faUserSlash, faRunning } from "@fortawesome/free-solid-svg-icons";
