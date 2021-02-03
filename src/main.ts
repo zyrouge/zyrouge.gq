@@ -7,9 +7,9 @@ import App from "./App.vue";
 import("./assets/main.css");
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faSun, faMoon, faBars, faTimes, faInfo, faCheck, faExclamation, faHatWizard, faAngleRight, faRedoAlt, faTrash, faPencilAlt, faBookDead, faUserSlash, faRunning } from "@fortawesome/free-solid-svg-icons";
+import { faSun, faMoon, faBars, faTimes, faInfo, faCheck, faExclamation, faHatWizard, faAngleRight, faRedoAlt, faTrash, faPencilAlt, faBookDead, faUserSlash, faRunning, faAt } from "@fortawesome/free-solid-svg-icons";
 import { faSadTear, faDizzy } from "@fortawesome/free-regular-svg-icons";
-import { faDiscord, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord, faGithub, faTwitter, faPatreon } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { UserInfo } from "./api";
 
@@ -32,7 +32,10 @@ library.add(
     faUserSlash,
     faRunning,
     faSadTear, // sad cry,
-    faDizzy, // dead guy
+    faDizzy, // dead guy,
+    faTwitter,
+    faPatreon,
+    faAt
 );
 
 const Notification = reactive<{
