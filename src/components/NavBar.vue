@@ -58,6 +58,11 @@
           >
         </p>
         <p>
+          <a class="text-gray-50" @click="minimizeMenu()" href="/projects"
+            >Projects</a
+          >
+        </p>
+        <p>
           <a class="text-gray-50" @click="minimizeMenu()" href="/discord"
             >Discord</a
           >
