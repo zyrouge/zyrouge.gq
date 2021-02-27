@@ -1,7 +1,6 @@
 node_modules
 package-lock.json
-scripts
-site/.DS_Store
-site/dist
-site/dist-ssr
+.DS_Store
+dist
+dist-ssr
 *.local
