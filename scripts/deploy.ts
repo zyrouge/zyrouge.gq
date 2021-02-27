@@ -13,7 +13,7 @@ const config = {
         from: path.join(root, "site", "dist"),
         to: path.join(root, "docs")
     },
-    indexFile: {
+    index404File: {
         from: path.join(root, "docs", "index.html"),
         to: path.join(root, "docs", "404.html")
     },
@@ -35,7 +35,7 @@ const start = async () => {
     console.log("Copied build files");
 
     /* Rename index.html */
-    await fs.rename(config.indexFile.from, config.indexFile.to);
+    await fs.copy(config.index404File.from, config.index404File.to);
     console.log("Rename index.html");
 
     /* CNAME File */
