@@ -24,6 +24,10 @@ const config = {
     indexFile: {
         from: path.join(root, "docs", "index.html"),
         to: path.join(root, "docs", "404.html")
+    },
+    CNAMEFile: {
+        to: path.join(root, "CNAME"),
+        data: "www.zyrouge.gq"
     }
 }
 
@@ -45,6 +49,10 @@ const start = async () => {
     /* New gitignore */
     await fs.writeFile(config.gitignore.to, config.gitignore.data);
     console.log("Wrote new gitignore");
+
+    /* CNAME File */
+    await fs.writeFile(config.CNAMEFile.to, config.CNAMEFile.data);
+    console.log("Wrote CNAME file");
 }
 
 start();
