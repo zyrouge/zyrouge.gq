@@ -13,14 +13,6 @@ const config = {
         from: path.join(root, "site", "dist"),
         to: path.join(root, "docs")
     },
-    gitignore: {
-        to: path.join(root, ".gitignore"),
-        data: [
-            ".github",
-            "scripts",
-            "site"
-        ].join("\n")
-    },
     indexFile: {
         from: path.join(root, "docs", "index.html"),
         to: path.join(root, "docs", "404.html")
@@ -45,10 +37,6 @@ const start = async () => {
     /* Rename index.html */
     await fs.rename(config.indexFile.from, config.indexFile.to);
     console.log("Rename index.html");
-
-    /* New gitignore */
-    await fs.writeFile(config.gitignore.to, config.gitignore.data);
-    console.log("Wrote new gitignore");
 
     /* CNAME File */
     await fs.writeFile(config.CNAMEFile.to, config.CNAMEFile.data);

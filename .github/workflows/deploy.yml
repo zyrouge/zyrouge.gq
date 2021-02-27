@@ -21,7 +21,7 @@ jobs:
         run: cd scripts && npm install && npm run deploy
 
       - name: Delete other files
-        run: rm -rf scripts site
+        run: rm -rf scripts site .github
 
       - name: Commit files
         run: |
