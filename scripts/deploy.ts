@@ -16,6 +16,7 @@ const config = {
     gitignore: {
         to: path.join(root, ".gitignore"),
         data: [
+            ".github",
             "scripts",
             "site"
         ].join("\n")
