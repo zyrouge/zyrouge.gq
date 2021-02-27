@@ -26,7 +26,7 @@ const config = {
         to: path.join(root, "docs", "404.html")
     },
     CNAMEFile: {
-        to: path.join(root, "CNAME"),
+        to: path.join(root, "docs", "CNAME"),
         data: "www.zyrouge.gq"
     }
 }
