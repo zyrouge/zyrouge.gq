@@ -12,14 +12,6 @@ const config = {
     site: {
         from: path.join(root, "site", "dist"),
         to: path.join(root, "docs")
-    },
-    index404File: {
-        from: path.join(root, "docs", "index.html"),
-        to: path.join(root, "docs", "404.html")
-    },
-    CNAMEFile: {
-        to: path.join(root, "docs", "CNAME"),
-        data: "www.zyrouge.gq"
     }
 }
 
@@ -33,14 +25,6 @@ const start = async () => {
     /* Copy build files */
     await fs.copy(config.site.from, config.site.to);
     console.log("Copied build files");
-
-    /* Rename index.html */
-    await fs.copy(config.index404File.from, config.index404File.to);
-    console.log("Rename index.html");
-
-    /* CNAME File */
-    await fs.writeFile(config.CNAMEFile.to, config.CNAMEFile.data);
-    console.log("Wrote CNAME file");
 }
 
 start();
