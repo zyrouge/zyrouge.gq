@@ -1,8 +1,8 @@
-name: Pong
+name: Deploy
 
 on:
   push:
-    - main
+    branches: [ $default-branch ]
 
 jobs:
   build:
