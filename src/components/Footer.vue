@@ -12,8 +12,8 @@
       ></path>
     </svg>
     <div class="text-center bg-red-500 text-gray-100 px-4">
-      <div class="flex flex-col md:flex-row justify-between mx-8 pb-8 pt-6 md:pt-0">
-        <p>&copy; Zyrouge Development — 2021</p>
+      <div class="mx-8 pb-8 pt-6 md:pt-0">
+        <p class="text-lg mb-2">&copy; Zyrouge Development — 2021</p>
         <div class="flex flex-row justify-center items-center pt-2 md:pt-0 text-xl">
           <a href="mailto:dev@zyrouge.gq"><font-awesome-icon icon="at"></font-awesome-icon></a>
           <p class="ml-3"><a href="/patreon"><font-awesome-icon :icon="['fab', 'patreon']"></font-awesome-icon></a></p>
